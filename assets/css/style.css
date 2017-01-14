@@ -1,0 +1,14 @@
+body{
+	background-color:#FFFFFF;opacity:1;
+	background:url(../img/bg.jpg) fixed center center;
+	background-size:cover;
+}
+li a{
+	text-decoration:none;
+	color:#000;
+}
+a:hover{
+	background-color:rgb(63,84,191);
+	color:#4C1919;
+	font-weight: bold;
+}
