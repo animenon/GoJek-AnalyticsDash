@@ -60,7 +60,7 @@ if(isset($_POST['btn-login']))
 		<form class="login-form form-horizontal" method="post" style="background: rgb(25, 25, 54);background: rgba(25, 25, 54, .3);">
 			
 			<fieldset>
-				<legend>Free India</legend>
+				<legend>Dashboard Login</legend>
 				<?php
 				  /*if(isset($msg)){
 				     print "<br />".$msg;
