@@ -26,7 +26,8 @@ if(isset($_POST['btn-login']))
 				$ui=$MySQLi_CON->query("SELECT user_id from users where email='$email'");
 				$uiArr=$ui->fetch_array();
 				$res=$MySQLi_CON->query("UPDATE user SET user_id='$uiArr[0]' WHERE email='$email'");
-				header("Location: login.php?thankyou=1");
+				mail('$email','Welcome to GoJeck Analytics Dashboard',"<h3>Welcome to GoJeck Analytics Dashboard</h3><hr /><br /><b>You have registered on the GoJek Dashboard.</b><br />Thank You, Happy Analyzing your data!<br /><br />For any queries contact <a href='mailto:admin@gojek.com?Subject=Hello%20I%20have%queries!'>admin@gojek.com</a>'",'From: webmaster@example.com');
+				header("Location: login.php?thankyou=1");				
 			}
 			else {
 				echo "Error: " . $sql . "<br>" . $MySQLi_CON->error;
@@ -45,7 +46,7 @@ if(isset($_POST['btn-login']))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Free India | Register</title>
+	<title>GoJek | Dashboard Registeration</title>
 	<style type="text/css">
 		html {padding-top: 5rem;border: none;}
 		.login {color:#BDB2D5;padding:5px;}
