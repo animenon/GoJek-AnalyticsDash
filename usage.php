@@ -1,19 +1,19 @@
 <?php
 session_start();
 include_once 'dbconnect.php';
-/*
+
 if(!isset($_SESSION['userSession']))
 {
  header("Location: login.php");
  exit;
 }
-*/
+
 
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Free India | Complaint Status</title>
+		<title>GoJek | Dashboard - Usage Analysis</title>
 		<link rel="shortcut icon" href="./assets/img/logo.png">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,13 +27,11 @@ if(!isset($_SESSION['userSession']))
 	</head>
 	<body>
 		<ul class="nav nav-pills" role="tablist" style="background-color:rgba(63,84,191,0.3);margin:5%;border-radius:5px;">
-			<li><a href="home.php"><img src="./assets/img/logo.png" width="15px" title="Citizen Services" alt="" />&nbsp;Home</a></li>
+			<li><a href="index.php"><img src="./assets/img/logo.png" width="15px" title="GoJek-Dashboard" alt="" />&nbsp;Home</a></li>
 			<li><a href="location.php">Geographical Analysis</a></li>
-			<li><a href="user.php">User Analysis</a></li>
-			<li><a href="usage.php">User Analysis</a></li>
+			<li><a href="usage.php">Usage Analysis</a></li>
+			<li><a href="user_ret.php">User based Analysis</a></li>
 			<li style="float:right;"><a href="logout.php?logout='bye'" style="text-decoration:none;">Logout</a></li>
-			<li style="float:right;"><a href="others.php">Other Useful Links</a></li>
-
 		</ul>
 		
 		
