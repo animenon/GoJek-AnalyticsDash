@@ -12,7 +12,7 @@ if(!isset($_SESSION['userSession']))
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>GoJek | Location Analysis</title>
+		<title>GoJek | Geographic Analysis</title>
 		<link rel="shortcut icon" href="./assets/img/logo.png">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,29 +36,8 @@ if(!isset($_SESSION['userSession']))
 		<div  class="col-md-offset-2 col-md-8 col-md-offset-2" style="background-color:rgba(239, 235, 229,0.5);border-radius:10px;padding-bottom:5%;font-size:15px;">
 			
 			<?php
-				echo "<h3>Location Analysis<br /></h3><hr />
+				echo "<h3>Geographic Analysis<br /></h3><hr />
 					<div class='col-md-12 text-center'><br />";
-				/*$query = $MySQLi_CON->query("SELECT `Country`, `City`, COUNT(`ID`) FROM gojek.sales GROUP BY `Country`, `City` ORDER BY COUNT(`ID`) DESC LIMIT 5 ");
-				$i=0;
-				while($row = mysqli_fetch_array($query)) {				
-				$rec[$i][0]=$row[0];
-				$rec[$i][1]=$row[1];
-				$rec[$i][2]=$row[2];
-				$i++;
-				}
-				$m=0;
-				while($i>=$m){
-					$j=0;
-					while($j<3){
-						echo $rec[$m][$j]." ";
-						$j++;
-					}
-					echo "<br />";
-					$m++;
-				}*/
-			?>
-			
-			<?php
 				
 				$cars = array("United States", "United Kingdom", "Canada", "Ireland", "Australia", "Switzerland", "France", "Germany", "Netherlands", "Norway", "Denmark", "Italy", "Sweden", "Spain", "Belgium", "Austria", "New Zealand", "Turkey", "United Arab Emirates", "Brazil", "South Africa", "Czech Republic", "Hungary", "Finland", "India", "Japan", "Malta", "Monaco", "Philippines", "Poland", "Thailand", "The Bahamas", "Argentina", "Bahrain", "Bermuda", "Bulgaria", "Cayman Isls", "China", "Costa Rica", "Dominican Republic", "Greece", "Guatemala", "Hong Kong", "Iceland", "Israel", "Jersey", "Kuwait", "Latvia", "Luxembourg", "Malaysia", "Mauritius", "Moldova", "Romania", "Russia", "South Korea", "Ukraine");
 				echo "<form action='location.php' method='post'>
@@ -94,14 +73,10 @@ if(!isset($_SESSION['userSession']))
 							$i++;
 						}
 					}
-					/*$i=0;
-					  while($i<count($res)){
-						echo $res[$i][0]." ".$res[$i][1]."\n";
-						$i++;
-					}*/
 				}
 			?>
 			</div>
+			<div class="col-md-12"><br /></div>
 			<div class="col-md-12">
 				<div id="chartContainer" style="height: 200px; width: 100%;"></div>
 			</div>
@@ -111,7 +86,7 @@ if(!isset($_SESSION['userSession']))
 	window.onload = function () {
 		var chart = new CanvasJS.Chart("chartContainer", {
 			title: {
-				text: "Analysis Chart"
+				text: "City-wise Geographic Analysis"
 			},
 			data: [{
 				type: "column",
@@ -122,11 +97,6 @@ if(!isset($_SESSION['userSession']))
 						}
 					?>
 
-					/*{ y: <?php echo $res[0][1]; ?>, label: "<?php echo $res[0][0]; ?>" },
-					{ y: <?php echo "1"; ?>, label: "Resolved" },
-					{ y: <?php echo "1"; ?>, label: "Assigned" },
-					{ y: <?php echo "1"; ?>, label: "In Progress" },
-					*/
 				]
 			}]
 		});

@@ -56,8 +56,8 @@ if(isset($_POST['btn-submit']))
 	<body>
 		<ul class="nav nav-pills" role="tablist" style="background-color:rgba(63,84,191,0.3);margin:5%;border-radius:5px;">
 			<li><a href="index.php"><img src="./assets/img/logo.png" width="15px" title="Citizen Services" alt="" />&nbsp;Home</a></li>
-			<li><a href="location.php">Complaints Analysis</a></li>
-			<li><a href="status.php">Complaint Status</a></li>
+			<li><a href="location.php">Geographical Analysis</a></li>
+			<li><a href="user.php">User Analysis</a></li>
 			<li style="float:right;"><a href="logout.php?logout='bye'" style="text-decoration:none;">Logout</a></li>
 			<li style="float:right;"><a href="others.php">Other Useful Links</a></li>
 		</ul>
